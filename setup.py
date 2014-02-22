@@ -118,7 +118,7 @@ if __name__ == '__main__':
 
     opt_parser.add_option('-d', '--dryrun', action='store_true', default=False,
                           dest='dryrun', help='show config values without running commands.')
-    opt_parser.add_option('-p', '--path', action='store', type='string',
+    opt_parser.add_option('-o', '--output_path', action='store', type='string',
                           dest='output_path', help='[required] skeleton files output target path.')
 
     opts, args = opt_parser.parse_args()
