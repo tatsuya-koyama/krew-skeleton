@@ -12,6 +12,7 @@ package {
         public function DebugMain() {
             krew.log("Kicked from DebugMain");
 
+            KrewConfig.IS_AIR = false;
             KrewConfig.ASSET_URL_SCHEME = "";
 
             var main:Main = new Main(this);

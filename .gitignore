@@ -4,6 +4,7 @@ build/
 asdoc-output/
 dumped-config.xml
 *.pyc
+mysetup.cfg
 
 # FlashBuilder Build and Release Folders
 bin/

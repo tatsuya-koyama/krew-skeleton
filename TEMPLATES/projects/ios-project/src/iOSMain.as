@@ -5,12 +5,12 @@ package {
     import krewfw.utils.krew;
 
     /**
-     * Customize options or components for Android publishing.
+     * Customize options or components for iOS publishing.
      */
-    public class AndroidMain extends Sprite {
+    public class iOSMain extends Sprite {
 
-        public function AndroidMain() {
-            krew.log("Kicked from AndroidMain");
+        public function iOSMain() {
+            krew.log("Kicked from iOSMain");
 
             KrewConfig.IS_AIR = true;
             KrewConfig.ASSET_URL_SCHEME = "app:/";

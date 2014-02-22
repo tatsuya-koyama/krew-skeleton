@@ -12,6 +12,7 @@ package {
         public function WebMain() {
             krew.log("Kicked from WebMain");
 
+            KrewConfig.IS_AIR = false;
             KrewConfig.ASSET_URL_SCHEME = "http://uri/to/assets/";
 
             var main:Main = new Main(this);

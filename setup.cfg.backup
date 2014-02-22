@@ -5,11 +5,17 @@
 #             (www.tatsuya-koyama.com)
 
 [names]
-app_id           = com.your-domain.game-title
-as3_package_name = your_package
-app_title        = AppTitle
-app_filename     = AppTitle_forShort
-swf_filename     = swf_output_name_for_web_publishing.swf
+app_id               = com.your-domain.game-title
+as3_package_name     = your_package
+app_title            = AppTitle
+app_filename         = AppTitle_forShort
+swf_filename         = swf_output_name_for_web_publishing.swf
+
+fb_path_var          = PATH_VAR_NAME_FOR_FLASH_BUILDER
+fb_debug_proj_name   = apptitle-debug-project
+fb_android_proj_name = apptitle-android-project
+fb_ios_proj_name     = apptitle-ios-project
+fb_web_proj_name     = apptitle-web-project
 
 [info]
 app_version = 1.0

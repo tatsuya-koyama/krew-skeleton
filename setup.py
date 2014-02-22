@@ -16,7 +16,7 @@ from tkutil.config import Config
 # constants
 #-------------------------------------------------------------------------------
 
-CONFIG_PATH = 'setup.cfg'
+DEFAULT_CONFIG_PATH = 'setup.cfg'
 
 #-------------------------------------------------------------------------------
 # main routine
@@ -43,8 +43,12 @@ def main(args, opts):
 
 
     #--- load config file
-    cprint('<yellow:load config file:/> %s' % CONFIG_PATH)
-    config = Config(CONFIG_PATH)
+    config_path = DEFAULT_CONFIG_PATH
+    if (opts.config_path):
+        config_path = opts.config_path
+
+    cprint('<yellow:load config file:/> %s' % config_path)
+    config = Config(config_path)
     config.describe()
 
 
@@ -84,6 +88,12 @@ def get_shell_commands(outpath, config):
         replace_cmd(cd2target, './commandline-build', '__SWF_FILENAME__', config.names.swf_filename),
         replace_cmd(cd2target, './core-src',          '__PACKAGE_NAME__', config.names.as3_package_name),
 
+        replace_cmd(cd2target, './projects',          '__FB_PATH_VAR__',          config.names.fb_path_var),
+        replace_cmd(cd2target, './projects',          '__FB_DEBUG_PROJ_NAME__',   config.names.fb_debug_proj_name),
+        replace_cmd(cd2target, './projects',          '__FB_ANDROID_PROJ_NAME__', config.names.fb_android_proj_name),
+        replace_cmd(cd2target, './projects',          '__FB_IOS_PROJ_NAME__',     config.names.fb_ios_proj_name),
+        replace_cmd(cd2target, './projects',          '__FB_WEB_PROJ_NAME__',     config.names.fb_web_proj_name),
+
         replace_cmd(cd2target, './projects',          '__APP_VERSION__',  config.info.app_version),
         replace_cmd(cd2target, './projects',          '__DESCRIPTION__',  config.info.description),
         replace_cmd(cd2target, './projects',          '__PUBLISHER__',    config.info.publisher),
@@ -120,6 +130,8 @@ if __name__ == '__main__':
                           dest='dryrun', help='show config values without running commands.')
     opt_parser.add_option('-o', '--output_path', action='store', type='string',
                           dest='output_path', help='[required] skeleton files output target path.')
+    opt_parser.add_option('-c', '--config', action='store', type='string',
+                          dest='config_path', help='specify config file path (default is setup.cfg)')
 
     opts, args = opt_parser.parse_args()
     sys.exit(main(args, opts))

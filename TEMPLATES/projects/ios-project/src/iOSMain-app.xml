@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<application xmlns="http://ns.adobe.com/air/application/__AIR_SDK_VER__">
+    <id>__APP_ID__</id>
+    <versionNumber>__APP_VERSION__</versionNumber>
+    <filename>__APP_FILENAME__</filename>
+    <initialWindow>
+        <content>AndroidMain.swf</content>
+        <aspectRatio>__ASPECT_RATIO__</aspectRatio>
+        <autoOrients>__AUTO_ORIENTS__</autoOrients>
+        <fullScreen>true</fullScreen>
+        <renderMode>direct</renderMode>
+        <depthAndStencil>false</depthAndStencil>
+    </initialWindow>
+    <supportedProfiles>mobileDevice</supportedProfiles>
+
+    <!-- SD カードに保存できるように -->
+    <android>
+      <manifestAdditions>
+        <![CDATA[
+                 <manifest android:installLocation="preferExternal"/>
+        ]]>
+      </manifestAdditions>
+    </android>
+
+    <!-- iOS specific capabilities -->
+    <iPhone>
+        <!-- A list of plist key/value pairs to be added to the application Info.plist -->
+        <InfoAdditions>
+            <![CDATA[
+                <key>UIDeviceFamily</key>
+                <array>
+                    <string>1</string>
+                    <string>2</string>
+                </array>
+
+                <key>UIPrerenderedIcon</key>
+                <true/>
+            ]]>
+        </InfoAdditions>
+        <requestedDisplayResolution>high</requestedDisplayResolution>
+    </iPhone>
+
+    <icon>
+        <image29x29>icons/29x29.png</image29x29>
+        <image57x57>icons/57x57.png</image57x57>
+        <image58x58>icons/58x58.png</image58x58>
+        <image72x72>icons/72x72.png</image72x72>
+        <image76x76>icons/76x76.png</image76x76>
+        <image80x80>icons/80x80.png</image80x80>
+        <image114x114>icons/114x114.png</image114x114>
+        <image120x120>icons/120x120.png</image120x120>
+        <image144x144>icons/144x144.png</image144x144>
+        <image152x152>icons/152x152.png</image152x152>
+        <image1024x1024>icons/1024x1024.png</image1024x1024>
+    </icon>
+</application>
