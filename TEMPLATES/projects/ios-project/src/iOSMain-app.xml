@@ -4,7 +4,7 @@
     <versionNumber>__APP_VERSION__</versionNumber>
     <filename>__APP_FILENAME__</filename>
     <initialWindow>
-        <content>AndroidMain.swf</content>
+        <content>iOSMain.swf</content>
         <aspectRatio>__ASPECT_RATIO__</aspectRatio>
         <autoOrients>__AUTO_ORIENTS__</autoOrients>
         <fullScreen>true</fullScreen>
