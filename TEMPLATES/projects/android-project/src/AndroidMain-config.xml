@@ -1,0 +1,31 @@
+<flex-config>
+    <use-network>false</use-network>
+
+    <default-size>
+        <width>480</width>
+        <height>320</height>
+    </default-size>
+    <default-background-color>__DEFAULT_BG_COLOR__</default-background-color>
+    <default-frame-rate>__DEFAULT_FPS__</default-frame-rate>
+
+    <default-script-limits>
+        <max-recursion-depth>65535</max-recursion-depth>
+        <max-execution-time>4</max-execution-time>
+    </default-script-limits>
+
+    <compiler>
+        <incremental>true</incremental>
+        <warn-duplicate-variable-def>false</warn-duplicate-variable-def>
+    </compiler>
+
+    <metadata>
+        <title>__APP_TITLE__</title>
+        <description>__DESCRIPTION__</description>
+        <publisher>__PUBLISHER__</publisher>
+        <creator>__CREATOR__</creator>
+        <language>__LANGUAGE__</language>
+    </metadata>
+
+    <benchmark>true</benchmark>
+    <static-link-runtime-shared-libraries>true</static-link-runtime-shared-libraries>
+</flex-config>

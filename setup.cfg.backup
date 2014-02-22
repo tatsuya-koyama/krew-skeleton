@@ -1,0 +1,31 @@
+# setup.cfg
+#     config file to generate krew-skeleton
+#
+# @copyright: 2014 by Tatsuya Koyama
+#             (www.tatsuya-koyama.com)
+
+[names]
+app_id           = com.your-domain.game-title
+as3_package_name = your_package
+app_title        = AppTitle
+app_filename     = AppTitle_forShort
+swf_filename     = swf_output_name_for_web_publishing.swf
+
+[info]
+app_version = 1.0
+description = Your App Description.
+publisher   = Your Name
+creator     = Your Name
+language    = EN
+
+[attributes]
+default_bg_color = 0x000000
+default_fps      = 60
+auto_orients     = true
+
+# landscape or portrait
+aspect_ratio     = landscape
+
+[env]
+air_sdk_ver = 4.0
+
