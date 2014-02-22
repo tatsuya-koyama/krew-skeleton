@@ -35,7 +35,6 @@ def main(args, opts):
     outpath = opts.output_path
     if not (outpath.endswith('/')):
         outpath += '/'
-        print '/ tashita yo'
 
     (status, stdout) = commands.getstatusoutput('cd ' + outpath)
     if (status != 0):
