@@ -107,7 +107,7 @@ install-android:
 #    are generated into /asset/image/.
 #
 atlas:
-	../script/atlas_generator/generate_atlas.rb --padding 2 --maxsize 1024x1024 \
+	../script/atlas-generator/generate_atlas.rb --padding 2 --maxsize 1024x1024 \
 	../asset/workfile/image_src/$(p)/*.png ../asset/asset/image/atlas_$(p).xml
 
 clean:
